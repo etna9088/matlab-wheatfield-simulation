@@ -13,4 +13,53 @@ The simulation uses a **stochastic modeling approach** to simulate a series of i
 - **Population Dynamics:** The wheat population is modeled based on a simple growth equation, with a fixed amount lost each month to a hypothetical pest, *Puccinia*.
 - **Outer Loop:** The entire simulation is run multiple times (defined by the user) to generate a distribution of possible outcomes.
 
-## Key Findings 
+## Key Findings & Results
+The simulation of the wheatfield harvest yielded a clear understanding of how random environmental factors impact agricultural output. The primary finding is that a field's harvest is not a single, predictable number, but rather a **distribution of possible outcomes**.
+
+Enter the number of experiments: > 3000
+Enter the monthly chance of sun: > 0.7
+Enter the sunny growth rate: > 0.5
+Enter the cloudy growth rate: > 0.2
+Enter the bushels lost per month to Puccinia: > 10
+
+
+              DATA STATISTICS REPORT
+=======================================================
+              Mean of data vector:  30382
+            Median of data vector:  28838.8
+              Mode of data vector:  56531.7
+   Maximum element in data vector:  56531.7
+   Minimum element in data vector:  9294.86
+Population std dev of data vector:  9544.17
+          Variance of data vector:  9.10911e+07
+
+        Number of data elements:  3000
+
+
+The statistical report from **3,000 simulation runs** shows significant variability in the final harvest yield:
+
+* The average harvest was **30,382 bushels**, with the median being close to this value.
+* The final harvest could range from a maximum of **56,531 bushels** (in scenarios with very favorable weather) to a minimum of **9,294 bushels** (in unfavorable scenarios).
+* The **standard deviation of 9,544 bushels** quantifies the typical amount of variation in the final harvest.
+
+These results are visually represented in the histogram below, which shows the frequency of different harvest yields and confirms that the outcomes are not uniform.
+
+![Histogram showing the distribution of wheatfield harvest yields.](plot.png)
+
+
+## Conclusion
+
+This project successfully demonstrates the use of a **stochastic simulation** to model a complex system. By running a large number of experiments, the model provided a realistic range of potential outcomes for the wheatfield harvest, which would not have been possible with a simple deterministic model. The findings underscore that in systems influenced by random variables, it is more valuable to predict the **range and probability of outcomes** than a single, fixed number. This approach can be applied to other fields, such as financial modeling or population dynamics, where uncertainty plays a key role.
+
+## How to Run
+This program can be run in MATLAB or Octave.
+
+1.  **Open the file:** Open the `wheatfield3.m` file in MATLAB or Octave.
+2.  **Run the script:** Run the script from the command line. You will be prompted to enter the following values:
+    - **`number_of_expts`**: The number of simulation runs you want to perform.
+    - **`chance_of_sun`**: A value between 0 and 1 representing the monthly probability of sunny weather.
+    - **`birth_sunny`**: The growth rate of the wheatfield on a sunny month.
+    - **`birth_cloudy`**: The growth rate of the wheatfield on a cloudy month.
+    - **`lost_to_Puccinia`**: The number of bushels lost per month.
+
+The program will then execute the simulation and display a statistical report and a histogram
