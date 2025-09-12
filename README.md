@@ -16,33 +16,22 @@ The simulation uses a **stochastic modeling approach** to simulate a series of i
 ## Key Findings & Results
 The simulation of the wheatfield harvest yielded a clear understanding of how random environmental factors impact agricultural output. The primary finding is that a field's harvest is not a single, predictable number, but rather a **distribution of possible outcomes**.
 
-Enter the number of experiments: > 3000
-Enter the monthly chance of sun: > 0.7
-Enter the sunny growth rate: > 0.5
-Enter the cloudy growth rate: > 0.2
-Enter the bushels lost per month to Puccinia: > 10
+The statistical report from **3,000 simulation runs** provides a clear summary of the results:
+
+| Statistic | Value |
+| :--- | :--- |
+| **Mean** | 30382 |
+| **Median** | 28838.8 |
+| **Mode** | 56531.7 |
+| **Maximum** | 56531.7 |
+| **Minimum** | 9294.86 |
+| **Standard Deviation** | 9544.17 |
+| **Variance** | 9.10911e+07 |
 
 
-              DATA STATISTICS REPORT
-=======================================================
-              Mean of data vector:  30382
-            Median of data vector:  28838.8
-              Mode of data vector:  56531.7
-   Maximum element in data vector:  56531.7
-   Minimum element in data vector:  9294.86
-Population std dev of data vector:  9544.17
-          Variance of data vector:  9.10911e+07
+The results show significant variability in the final harvest yield. The mean harvest was 30,382 bushels, but the final yield could range significantly from a high of 56,531 bushels (in a very sunny scenario) to a low of 9,294 bushels (in a very cloudy scenario).
 
-        Number of data elements:  3000
-
-
-The statistical report from **3,000 simulation runs** shows significant variability in the final harvest yield:
-
-* The average harvest was **30,382 bushels**, with the median being close to this value.
-* The final harvest could range from a maximum of **56,531 bushels** (in scenarios with very favorable weather) to a minimum of **9,294 bushels** (in unfavorable scenarios).
-* The **standard deviation of 9,544 bushels** quantifies the typical amount of variation in the final harvest.
-
-These results are visually represented in the histogram below, which shows the frequency of different harvest yields and confirms that the outcomes are not uniform.
+This variability is visually represented in the histogram below, which shows the frequency of different harvest yields and confirms that the outcomes are not uniform.
 
 ![Histogram showing the distribution of wheatfield harvest yields.](plot.png)
 
