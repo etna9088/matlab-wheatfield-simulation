@@ -51,4 +51,4 @@ This program can be run in MATLAB or Octave.
     - **`birth_cloudy`**: The growth rate of the wheatfield on a cloudy month.
     - **`lost_to_Puccinia`**: The number of bushels lost per month.
 
-The program will then execute the simulation and display a statistical report and a histogram
+The program will then execute the simulation and display a statistical report and a histogram.
